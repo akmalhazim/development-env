@@ -6,6 +6,7 @@ services:
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
     environment:
+      - discovery.type=single-node
       - xpack.security.enabled=false
       - xpack.security.enrollment.enabled=false
       - xpack.security.http.ssl.enabled=false
